@@ -11,10 +11,11 @@ app.use(express.json());
 // Use environment variables for security
 const API_KEY = process.env.API_KEY; // Your short key, e.g. 998f19f8-8ca6-4ff7-aeca-d09abf498ac5
 const AGENT_ID = process.env.AGENT_ID;
+const ORG_ID = process.env.ORG_ID; // Add this line
 
 function generateJwt() {
   const payload = {
-    // Add orgId if required by Vapi, otherwise remove
+    orgId: ORG_ID, // Add orgId to the payload
     token: { tag: "private" }
   };
   return jwt.sign(payload, API_KEY, { algorithm: "HS256", expiresIn: "1h" });
