@@ -45,4 +45,6 @@ app.post('/api/vapi', async (req, res) => {
   }
 });
 
-app.listen(3001, () => console.log('Backend running on http://localhost:3001'));
+// Use dynamic port for Render, 3002 for local
+const PORT = process.env.PORT || 3002;
+app.listen(PORT, () => console.log(`Backend running on http://localhost:${PORT}`));
