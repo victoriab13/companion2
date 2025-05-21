@@ -51,10 +51,10 @@ const VapiAgent = () => {
   return (
     <Paper elevation={3} sx={{ maxWidth: 420, mx: "auto", mt: 4, p: 3 }}>
       <Typography variant="h4" gutterBottom sx={{ fontWeight: "bold", textAlign: "center" }}>
-        Ari – A Gentle Companion for Life’s Harder Moments
+        Coaching Assistant
       </Typography>
       <Typography variant="subtitle1" gutterBottom sx={{ textAlign: "center", mb: 3 }}>
-        Emotional support to navigating care—reflect, breathe, and take one step at a time.
+        Gentle, personalized coaching support for growth and self-awareness.
       </Typography>
       <Box sx={{ minHeight: 180, mb: 2 }}>
         {messages.map((msg, idx) => (
